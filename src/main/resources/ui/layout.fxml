@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml"
+		  fx:controller="inc.maybak.text2wave.controller.ApplicationController">
+	<padding>
+		<Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+	</padding>
+
+	<!-- Title -->
+	<Label text="Text to Wave Generator"
+		   style="-fx-font-size: 18px; -fx-font-weight: bold;"
+		   GridPane.columnSpan="3" />
+
+	<!-- Input File -->
+	<Label text="Prompts List:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+	<TextField fx:id="csvFilePath" prefWidth="300"
+			   GridPane.rowIndex="1" GridPane.columnIndex="1" />
+	<Button text="Browse" onAction="#handleBrowseCSV"
+			GridPane.rowIndex="1" GridPane.columnIndex="2" />
+
+	<!-- Output Folder -->
+	<Label text="Prompts Save Location:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+	<TextField fx:id="outputFolderPath" prefWidth="300"
+			   GridPane.rowIndex="2" GridPane.columnIndex="1" />
+	<Button text="Browse" onAction="#handleBrowseFolder"
+			GridPane.rowIndex="2" GridPane.columnIndex="2" />
+
+	<!-- Start Processing button aligned right -->
+	<HBox alignment="BASELINE_RIGHT" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="3">
+		<Button text="Start Processing" onAction="#handleStartProcessing" />
+	</HBox>
+
+	<!-- Progress Bar -->
+	<ProgressBar fx:id="progressBar" prefHeight="35" progress="0.0"
+				 GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="3"
+				 style="-fx-border-color: #ccc; -fx-border-width: 1;"/>
+
+	<!-- Status Label -->
+	<Label text="Status:" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="3" />
+
+	<!-- Status Area -->
+	<TextArea fx:id="statusArea" prefHeight="200" wrapText="true" editable="false"
+			  GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="3" />
+</GridPane>

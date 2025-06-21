@@ -1,0 +1,30 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f9f9f9;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.text-field {
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+}
+
+.button:hover {
+    -fx-background-color: #45A049;
+}
+
+.progress-bar {
+    -fx-border-color: #999;
+    -fx-border-width: 1;
+    -fx-accent: #4CAF50;
+}
